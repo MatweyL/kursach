@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Getacar</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header>
+		<nav class="adaptive-nav">
+			<a href="index.html" class="logo">Getacar</a>
+			<label for="show-menu" class="show-menu">
+				<div class="burger-menu"></div>
+			</label>
+			<input type="checkbox" id="show-menu">
+			<div class="menu">
+				<a href="models.html" class="menu-item">Модельный ряд<span></span></a>
+				<a href="trade.html" class="menu-item">Trade-in<span></span></a>
+				<a href="stocks.html" class="menu-item">Акции<span></span></a>
+				<a href="contacts.html" class="menu-item">Контакты<span></span></a>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<section class="content">
+				<h2 class="content-title page-main-title">Программа Trade-in</h2>
+				<div class="trade-container">
+					<div class="trade">
+						<form class="trade-form">
+							<p class="form-text-title">Заявка на Trade-in</p>
+							<p class="form-text">Выберете автомобиль</p>
+							<div class="trade-form-input">
+								<select name="cars-selector" id="cars-selector" required>
+									<option selected value="" disabled>Не выбрано</option>
+									<option value="img/bmw1.png">BMW X1</option>
+									<option value="img/audi1.png">Audi A4</option>
+									<option value="img/mercedes1.png">Mercedes-Benz G 400 d</option>
+									<option value="img/audi2.png">Audi A7</option>
+									<option value="img/porsche1.png">Porsche Cayenne</option>
+									<option value="img/honda1.png">Honda Accord</option>
+									<option value="img/toyota1.png">Toyota Hilux</option>
+									<option value="img/audi3.png">Audi A6</option>
+									<option value="img/volkswagen1.png">Volkswagen Jetta New</option>
+								</select>
+							</div>
+							<p class="form-text">Ваш автомобиль</p>
+							<div class="trade-form-input">
+								<input type="text" name="car-name"  placeholder="Марка автомобиля" autocomplete="off" required title="Марка авто">
+								<input type="text" name="car-date"  placeholder="Год выпуска" pattern="[1][9][0-9]{2}|[2][0]([0][0-9]|[1][0-9]|[2][0-1])" maxlength="4" autocomplete="off" required title="Год выпуска (1900-2021)">
+								<input type="text" name="car-mileage"  placeholder="Пробег" title="Пробег, км" pattern="[~0][0-9]+" autocomplete="off" required>
+							</div>
+							<p class="form-text">Контактные данные</p>
+							<div class="trade-form-input">
+								<input type="text" name="customer-name"  placeholder="ФИО" autocomplete="off" pattern="^[А-я]+ [А-я]+ [А-я]+$" title="Фамилия Имя Отчество" required>
+								<input type="tel" name="customer-phone" placeholder="89000000000" id="phone" pattern="[8]{1}[9]{1}[0-9]{9}" title="890000000000" maxlength="11" autocomplete="off" required>
+							</div>
+							<button type="submit">Оставить заявку</button>
+						</form>
+						<div class="trade-info">
+							<div class="car-image">
+								<img id="selected-car-img" src="img/empty_car.png">
+							</div>
+							<div class="trade-required">
+								<p>Необходимые документы для программы Trade-in:</p>
+								<ul>
+									<li>Паспорт владельца автомобиля</li>
+									<li>Паспорт технического средства</li>
+									<li>Свидетельство о регистрации транспортного средства</li>
+									<li>Доверенность, если машину продает и покупает не собственник</li>
+								</ul>
+							</div>
+						</div>						
+					</div>
+				</div>
+				<div class="padding"></div>
+		</section>
+
+	</main>
+
+	<footer>
+		<div class="special-info">
+			<a href="#" class="footer-link text">Политика конфенденциальности</a>
+			<a href="#" class="footer-link text">Юридическая информация</a>
+			<a href="#" class="footer-link text">Часто задаваемые вопросы</a>
+			<a href="#" class="footer-link text">Партнерам</a>
+		</div>
+		<div class="site-info"><span class="text">Центр поддержки клиентов +7 890 200-50-60</span></div>
+		<div class="site-info">
+			<p class="text">&copy; Getacar 2021</p>
+			<p class="text">Powered by <a href="#" class="footer-link text ">Matvey Lomovtsev</a></p>
+		</div>
+	</footer>
+		<script>
+		    var select = document.getElementById('cars-selector'),
+		    img = document.getElementById('selected-car-img');
+		    select.addEventListener('change', changeImg.bind(this),false)
+		    function changeImg(elem) {
+		      img.src = elem.target.value;
+		    }
+		  </script>
+</body>
+</html>

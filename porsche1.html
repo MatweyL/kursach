@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Getacar</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
+	<link rel="stylesheet" href="styles.css">
+	<script src="sсripts.js"></script>
+</head>
+<body>
+	<header>
+		<nav class="adaptive-nav">
+			<a href="index.html" class="logo">Getacar</a>
+			<label for="show-menu" class="show-menu">
+				<div class="burger-menu"></div>
+			</label>
+			<input type="checkbox" id="show-menu">
+			<div class="menu">
+				<a href="models.html" class="menu-item">Модельный ряд<span></span></a>
+				<a href="trade.html" class="menu-item">Trade-in<span></span></a>
+				<a href="stocks.html" class="menu-item">Акции<span></span></a>
+				<a href="contacts.html" class="menu-item">Контакты<span></span></a>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<section class="content">
+				<h2 class="content-title page-main-title">Porsche Cayenne</h2>
+				<div class="detailed-car-container">
+					 <div class="main-car-container">
+					 	<div class="main-car-img">
+					 		<img src="img/porsche1.png">
+					 		<div class="main-car-cost">от <span class="number"	>2 500 000</span> руб.</div>
+					 	</div>
+					 	<div class="main-car-info">
+					 		
+					 		<form class="trade-form credit-form">
+								<p class="form-text-title">Заявка на кредит</p>
+								<p class="form-text">Первоначальный взнос</p>
+								<div class="trade-form-input">
+									<select>
+										<option value="">0%</option>
+										<option value="">10%</option>
+										<option value="">20%</option>
+										<option value="">30%</option>
+										<option value="">40%</option>
+										<option value="">50%</option>
+										<option value="">60%</option>
+										<option value="">70%</option>	
+									</select>
+								</div>
+								<p class="form-text">Контактные данные</p>
+								<div class="trade-form-input">
+									<input type="text" name="customer-name" id="car-form-fio" placeholder="ФИО"  pattern="^[А-я]+ [А-я]+ [А-я]+$" title="Фамилия Имя Отчество" required>
+									<input type="tel" name="customer-phone" placeholder="89000000000" id="phone" pattern="[8]{1}[9]{1}[0-9]{9}" title="890000000000" maxlength="11" required>
+								</div>
+								<button type="submit">Оставить заявку</button>
+							</form>
+					 	</div>
+					 </div>
+				</div>
+		</section>
+		<section class="content-not-full-height">
+				<h2 class="content-title">Технические характеристики</h2>
+				<div class="main-car-characteristics">
+					<div class="characteristic">
+						<div class="text characteristic-name">Двигатель</div>
+						<div class="characteristic-properties">
+							<div class="property">
+								<div class="text propety-name">Объем двигателя, л</div>
+								<div class="text propety-value">5</div>
+							</div>
+							<div class="property">
+								<div class="text propety-name">Рабочий объем двигателя, см3</div>
+								<div class="text propety-value">4997</div>
+							</div>
+							<div class="property">
+								<div class="text propety-name">Тип двигателя</div>
+								<div class="text propety-value">Дизель</div>
+							</div>
+							<div class="property">
+								<div class="text propety-name">Тип привода</div>
+								<div class="text propety-value">4WD</div>
+							</div>
+							<div class="property">
+								<div class="text propety-name">Мощность, л.с.</div>
+								<div class="text propety-value">250</div>
+							</div>
+						</div>
+					</div>
+					<div class="characteristic">
+						<div class="text characteristic-name">Кузов</div>
+						<div class="characteristic-properties">
+							<div class="property">
+								<div class="text propety-name">Длина</div>
+								<div class="text propety-value">5000</div>
+							</div>
+							<div class="property">
+								<div class="text propety-name">Ширина</div>
+								<div class="text propety-value">2000</div>
+							</div>
+							<div class="property">
+								<div class="text propety-name">Высота</div>
+								<div class="text propety-value">1900</div>
+							</div>
+						</div>
+					</div>
+					<div class="characteristic">
+						<div class="text characteristic-name">Эксплуатационные показатели</div>
+						<div class="characteristic-properties">
+							<div class="property">
+								<div class="text propety-name">Разгон от 0 до 100 км/ч, сек.</div>
+								<div class="text propety-value">5.8</div>
+							</div>
+							<div class="property">
+								<div class="text propety-name">Максимальная скорость, км/ч</div>
+								<div class="text propety-value">260</div>
+							</div>
+							<div class="property">
+								<div class="text propety-name">Объем топливного бака, л</div>
+								<div class="text propety-value">30</div>
+							</div>
+						</div>
+					</div>
+					<div class="characteristic">
+						<div class="text characteristic-name">Подвеска и тормоза</div>
+						<div class="characteristic-properties">
+							<div class="property">
+								<div class="text propety-name">Дорожный просвет, мм</div>
+								<div class="text propety-value">180</div>
+							</div>
+							<div class="property">
+								<div class="text propety-name">Колесная база, мм</div>
+								<div class="text propety-value">3700</div>
+							</div>
+							<div class="property">
+								<div class="text propety-name">Передняя колея колес, мм</div>
+								<div class="text propety-value">1800</div>
+							</div>
+							<div class="property">
+								<div class="text propety-name">Задняя колея колес, мм</div>
+								<div class="text propety-value">1798</div>
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div class="padding"></div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="special-info">
+			<a href="#" class="footer-link text">Политика конфенденциальности</a>
+			<a href="#" class="footer-link text">Юридическая информация</a>
+			<a href="#" class="footer-link text">Часто задаваемые вопросы</a>
+			<a href="#" class="footer-link text">Партнерам</a>
+		</div>
+		<div class="site-info"><span class="text">Центр поддержки клиентов +7 890 200-50-60</span></div>
+		<div class="site-info">
+			<p class="text">&copy; Getacar 2021</p>
+			<p class="text">Powered by <a href="#" class="footer-link text ">Matvey Lomovtsev</a></p>
+		</div>
+	</footer>
+	
+</body>
+</html>

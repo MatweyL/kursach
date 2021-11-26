@@ -1,0 +1,727 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+/*STYLES FOR ADAPTIVE NAVBAR*/
+.adaptive-nav {
+	padding: 10px 90px;/*padding will be removed in mobile for correct display menu*/
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	color: #FFEFFE;
+	background: #010001;
+}
+
+.logo {
+	display: block;
+	text-decoration: none;
+	color: #FFEFFE;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.menu {display: flex;}
+
+.menu-item {
+	display: block;
+	margin-left: 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #FFEFFE;
+	font-size: 16px;
+	font-weight: bolder;
+}
+
+.show-menu, #show-menu {
+	display: none;
+}
+
+/*burger-menu button (custom, we can use the html special character)*/
+.burger-menu {
+	margin: 10px 30px 10px 0px;/*add margin for pretty display in mobile*/
+	border-bottom: 15px double #FFEFFE;
+    border-top: 5px solid #FFEFFE;
+    content:"";
+    height: 5px; 
+    width:20px;
+    cursor: pointer;
+}
+
+.menu-item:after {
+	display: block;
+	content: "";
+	background: #FFEFFE;
+	height: 2px;
+    width: 0%;
+    transition: width 0.3s ease-in-out
+}
+
+.menu-item:hover:after {
+	width: 100%;
+}
+.menu-item:active {
+	color: #BBBBBB;
+}
+ .menu-item:active:after{
+	background: #BBBBBB;
+}
+
+.burger-menu:hover {border-bottom: 15px double #AAAAAA; border-top: 5px solid #AAAAAA;}/*pretty colors with #010001: #FFAFFA, #FF5FF5*/
+.burger-menu:active {border-bottom: 15px double #777777; border-top: 5px solid #777777;}
+
+/*END STYLES OF ADAPTIVE NAVBAR*/
+
+/*HERO-IMAGE STYLES*/
+
+.hero-image {
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("img/hero-car.jpg") no-repeat center / cover;/*linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),*/
+	color: #FFFFFE;
+}
+
+.hero-text-container {max-width: 900px;}
+
+.hero-text {
+	padding-left: 6vw;
+	padding-right: 10vw;
+	padding-top: 21vh;
+}
+
+.hero-text-line {margin-bottom: 5px;}
+.hero-text h1 {font-size: 40px;}
+.hero-text h2 {margin-top: 25px;font-size: 26px;}
+.hero-text p {margin-top: 25px;font-size: 17px;max-width: 500px;}
+
+.hero-button {
+	margin-top: 25px;
+	display: inline-block;
+	text-decoration: none;
+	color: #FFFFFE;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 23px;
+	padding: 11px;
+	border: 2px solid #FFFFFE;
+	border-radius: 3px;
+}
+
+.hero-button:hover {background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));}
+.hero-button:active {
+	color: #EEEEEE;
+	border-color: #EEEEEE;
+	background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+.adaptive-nav {
+	box-sizing: border-box;
+	position: fixed;/*only fixed in this case!*/
+	width: 100vw;
+	z-index: 2;
+}
+
+.test-text {
+	display: block;
+	margin:  10px 0px;
+	text-align: center;
+}
+
+/*END OF HERO-IMAGE STYLES*/
+
+/*STYLE FOR CONTENT BLOCK*/
+.content {
+	background: #f5f5f5;
+	min-height: 100vh;
+	width: 100%;
+}
+
+.content-not-full-height {
+	background: #f5f5f5;
+}
+/*END STYLED FOR CONTENT BLOCK
+
+/*STYLES FOR CAR-CARDS*/
+
+
+.content-title {
+	padding: 20px 0px;
+	text-align: center;
+	font-size: 26px;
+	text-transform: uppercase;
+}
+
+.cars-container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.cars-column {
+	width: 30%;
+	margin-left: 10px;
+}
+
+.car {
+	display: block;
+	text-decoration: none;
+	color: #010001;
+	padding: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+	border: 1px solid #BBBBBB;
+	transition: all 0.4s ease-in-out;
+	background: rgba(0, 0, 0, 0.02);
+}
+
+.car:hover { box-shadow: 0px 0px 20px 2px #AAAAAA;transition: all 0.4s ease-in-out;}
+.car-image {overflow: hidden;}
+.car-image img {
+	height: 165px;/*optimal width and height: 20 vw/vh*/
+	width: auto;
+	object-fit: cover;
+}
+
+.car-price {
+	margin: 10px 0px;
+}
+
+/*END STYLES FOR CAR-CARDS*/
+
+/*STYLES FOR FOOTER*/
+footer {
+	padding: 20px;
+	background: #444444;
+	
+}
+
+.footer-link {
+	text-decoration: none;
+}
+
+.footer-link:not(:last-child):after {
+	margin-left: 5px;
+	content: "|";	
+}
+
+.footer-link:hover {
+	text-decoration: underline;
+}
+footer .text {
+	color: #F0F0F0;
+}
+
+.site-info {
+	 margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+/*END STYLES FOR FOOTER*/
+
+/*STYLES FOR BENEFITS*/
+
+.benefit-cards-container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding-top: 20px;
+	padding-bottom: 60px;
+}
+
+.benefit-card {
+	margin-left: 20px;
+	padding: 10px;
+	width: 25%;
+}
+
+.benefit-img {
+	text-align: center;
+	overflow: hidden;
+}
+
+.benefit-img img {
+	width: 60%;
+	height: auto;
+}
+
+.benefit-info {
+	padding-top: 10px;
+	text-align: center;
+}
+
+.benefit-info p {
+	padding-top: 10px;
+}
+
+/*END STYLES FOT BENEFITS*/
+
+
+/*PAGES STYLES*/
+.page-main-title {
+	padding-top: 75px;
+}
+
+.padding {
+	padding-top: 50px;
+}
+/*END OF PAGES STYLES*/
+
+/*STYLES FOR CONTACTS*/
+
+
+.contacts-container {
+	display: flex;
+	max-width: 1200px;
+	margin: 0 auto;
+
+}
+
+.contacts {
+	min-width: 300px;
+	width: 50%;
+	background: #010001;
+	padding: 80px;
+}
+
+.contacts p {
+	font-size: 25px;
+	font-weight: bold;
+	color: #f5f5f5;
+}
+
+.contacts p:not(:first-child) {
+		margin-top: 20px;
+}
+
+.map {
+	width: 100%;position:relative;z-index: 1;
+}
+
+.contacts-page-text-center {
+	padding: 50px;
+	text-align: center;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+/*END STYLES FOR CONTACTS*/
+
+/*STYLES FOR STOCKS PAGE*/
+
+.stocks-container {
+	margin: 0 auto;
+	max-width: 1500px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+}
+
+.stock {
+	border: 1px solid #BBBBBB;
+	background: rgba(0, 0, 0, 0.1);
+	display: flex;
+	width: 90%;
+}
+
+.stock:not(:first-child) {
+	margin-top: 20px;
+}
+
+.stock-img {
+	overflow: hidden;
+	width: 90%;
+	max-width: 600px;
+}
+
+.stock-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.stock-info {
+	box-sizing: border-box;
+	padding: 40px;
+}
+
+.stock-info h2 {
+	font-size: 26px;
+}
+.stock-info p {
+	margin-top: 10px;
+	font-size: 18px;
+}
+
+.stock-form {
+	overflow: hidden;
+}
+
+.stock-form input {
+	box-sizing: border-box;
+	height: 54px;
+	font-size: 18px;
+	margin-top: 20px;
+	padding: 0px 20px;
+	width: 100%;/*min-width: 430px;*/
+	display: block;
+}
+
+.stock-form button {
+	margin-top: 20px;
+	padding: 0px 20px;
+	width: 100%;
+	height: 54px;
+	font-size: 18px;
+	color: #FFFFFE;
+	text-transform: uppercase;
+	background:rgb(30,30,30);
+	border: 1px solid gray;
+}
+
+.stock-form button:hover {
+	color: #FFFFFE;
+	background:rgb(60,60,60);
+	transition: all 0.3s ease-in-out;
+}
+
+.stock-form button:active {
+	color: #EEEEEE;
+	border-color: #EEEEEE;
+	background:rgb(30,30,30)
+}
+
+/* END STYLES FRO STOCKS PAGE*/
+
+/* STYLES FOR TRADE-IN */
+
+.trade-container {
+	margin: 0px 20px;
+}
+
+.trade {
+	display: flex;
+	justify-content: center;
+}
+
+.trade-form {
+	width: 30%;
+	padding: 30px;
+	border: 1px solid #BBBBBB;
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.trade-form input {
+	margin-top: 10px;
+	display: block;
+	box-sizing: border-box;
+	height: 54px;
+	font-size: 18px;
+	padding: 0px 20px;
+	width: 100%;
+}
+
+.trade-form-input select {
+	display: block;
+	box-sizing: border-box;
+	height: 54px;
+	font-size: 18px;
+	padding: 0px 20px;
+	width: 100%;
+}
+
+.trade-form .form-text {
+	font-size: 20px;
+}
+
+.form-text-title {
+	font-size: 26px;
+	font-weight: bold;
+	margin-bottom: 20px;		
+}
+
+.trade-form-input select  {
+	margin-top: 10px;
+}
+
+.trade-form .form-text {
+	margin-top: 20px;
+}
+
+.trade-info {
+	width: 50%;
+	padding: 40px;
+}
+
+.trade-required p {
+	font-size: 26px;
+	margin-bottom: 10px;	
+}
+.trade-required ul li {
+	font-size: 19px;
+	margin-bottom: 10px;
+	list-style: none;	
+}
+
+.trade-required ul li::before {
+	content: '\2714';
+	margin-right: 5px;
+}
+
+.trade .car-image {
+	overflow: hidden;
+	text-align: center;
+}
+
+.trade .car-image img {
+	height: 300px;
+	width: auto;
+}
+
+.trade-form button {
+	margin-top: 20px;
+	padding: 0px 20px;
+	width: 100%;
+	height: 54px;
+	font-size: 18px;
+	color: #FFFFFE;
+	text-transform: uppercase;
+	background:rgb(30,30,30);
+	border: 1px solid gray;
+}
+
+.trade-form button:hover {
+	color: #FFFFFE;
+	background:rgb(60,60,60);
+	transition: all 0.3s ease-in-out;
+}
+
+.trade-form button:active {
+	color: #EEEEEE;
+	border-color: #EEEEEE;
+	background:rgb(30,30,30)
+}
+
+/* END STYLES FOR TRADE-IN */
+
+/* STYLES FOR DETAILED CAR INFO */
+
+.detailed-car-container {
+	margin: 0px 20px;
+	max-width: 1500px;
+}
+
+.main-car-container {
+	display: flex;
+	justify-content: space-around;
+}
+
+.main-car-img {
+	overflow: hidden;
+}
+
+.main-car-cost {
+	text-align: center;
+	font-size: 26px;
+}
+
+.main-car-cost .number {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+
+.main-car-img img{
+	height: 400px;
+	width: auto;
+	object-fit: cover;
+}
+
+.main-car-info {
+	display: flex;
+}
+
+.credit-form {
+	width: 100%;
+}
+
+.main-car-characteristics {
+	margin: 0px auto;
+	max-width: 1200px;
+}
+
+.characteristic {
+	margin: 0 20px;
+}
+
+.characteristic .text {
+	padding: 5px;
+	padding-top: 10px;
+}
+
+
+.characteristic-name {
+	background: rgba(0, 0, 0, 0.1);
+	font-weight: bold;
+}
+
+.property {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* END STYLES FOR DETAILED CAR INFO */
+
+@media screen and (min-width: 1200px) {
+	.car {max-width: 400px;}
+	.car-image img{height: 200px;}
+}
+
+@media screen and (max-width: 960px) {
+	/*STYLES FOR HERO-IMAGE*/
+	.hero-image {background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/hero-car.jpg") no-repeat center / cover;}
+	.hero-text-line {margin-bottom: 5px;}
+	.hero-text h1 {font-size: 36px;}
+	.hero-text h2 {font-size: 24px;}
+	.hero-text p {font-size: 16px;}
+	/*END STYLES FOR HERO-IMAGE*/
+	
+	/*STYLES FOR CARS*/
+	.cars-column {width: 90%;}
+	.car-image img {height: auto;width: 80%;}
+	/*END STYLES FOR CARS*/
+
+	/*STYLES FOR TRADE-IN*/
+	.trade .car-image img {
+		height: 250px;
+	}
+	/*END STYLES FOR TRADE-IN*/
+
+	/*STYLES FOR DETAILED CAR INFO*/
+	.main-car-img img{
+	height: 300px;}
+	/*END STYLES FOR DETAILED CAR INFO*/
+
+}
+
+@media screen and (max-width : 856px) {
+	/*STYLES FOR ADAPTIVE NAVBAR*/
+	.show-menu {
+		display: block;
+	}
+
+	.adaptive-nav {
+		padding: 0px;/*canceling padding because we use padding in logo and burger*/
+	}
+
+	.logo {
+		margin: 10px 0px 10px 30px;/*margin in logo and burger instead of start padding*/
+	}
+
+	/*styles for menu drop animation*/
+	.menu {
+		display: block;
+		min-width: 100%;
+		margin-top: -50vh;
+		transition: margin-top 0.3s ease-in-out;
+	}
+
+	.menu-item {
+		display: inline-block;
+		padding: 10px 0px;
+		text-align: center;
+		margin-left: 0px;
+		display: block;
+	}
+	.menu-item:after {display: none;}
+	.menu-item:hover {background: #333333;}
+	.menu-item:active {color: #FFEFFE;background: #777777;}
+
+	.adaptive-nav input[type="checkbox"]:checked + .menu {
+		margin-top: 0vh;
+		transition: margin-top 0.3s ease-in-out;
+	}
+	/*END STYLES OF ADAPTIVE NAVBAR*/
+
+	/*STYLES FOR HERO-IMAGE*/
+	.hero-image {background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/hero-car.jpg") no-repeat center / cover;}
+	.hero-text-line {margin-bottom: 5px;}
+	.hero-text h1 {font-size: 32px;}
+	.hero-text h2 {font-size: 21px;}
+	.hero-text p {font-size: 16px;}
+	.hero-button {
+		font-size: 21px;
+		padding: 9px;
+		border: 2px solid #FFFFFE;
+		border-radius: 3px;
+	}
+	/*END STYLES FOR HERO-IMAGE*/
+	/*STYLES FOR CARS*/
+	.cars-column {width: 90%;}
+	/*END STYLES FOR CARS*/
+
+	/*STYLES FOR CONTACTS PAGE*/
+	.contacts-container {
+		display: block;
+	}
+
+	.contacts {
+		width: 100%;
+	}
+	/*END STYLES FOR CONTACTS PAGE*/
+
+	/*STYLES FOR STOCKS PAGE*/
+
+	.stock {
+		display: block;
+		width: 90%;
+	}
+
+	.stock-img {
+		overflow: hidden;
+		width: 100%;
+		max-width: none;
+	}
+
+	/*END STYLES FOR STOCKS PAGE*/
+
+	/*STYLES FOR TRADE-IN*/
+	.trade {
+		flex-direction: column-reverse;
+	}
+
+	.trade .car-image img {
+		height: auto;
+		width: 100%;
+	}
+
+	.trade-info {
+		width: 90%;
+	}
+
+	.trade-form {
+		width: 90%;
+	}
+
+	/*END STYLES FOR TRADE-IN*/
+
+	/*STYLES FOR DETAILDE CAR PAGE*/
+	.main-car-container {
+		display: block;
+	}
+
+	.main-car-img img{
+		width: 100%;
+		height: auto;
+	}
+
+	.credit-form {
+		margin-top: 20px;
+	}
+
+	/*END STYLES FOR DETAILDE CAR PAGE*/
+
+}
+
